@@ -1,7 +1,6 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
 import AutoNavPlugin from '@magicpocket/vuepress-plugin-auto-navbar'
 
-
 export default defineUserConfig({
 	lang: 'zh-CN',
 	title: '代码干燥计划',
@@ -27,11 +26,9 @@ export default defineUserConfig({
 					depth: 2,
 					useREADME: true
 				}),
-				sidebar: 'auto',
-				// page meta
-				editLinkText: 'Edit this page on GitHub',
-				editLinks: true,
-			},
+				sidebar: 'auto'
+			}
 		}
 	})
 })
+

@@ -4,12 +4,11 @@
 		"docs:build": "vuepress build docs"
 	},
 	"devDependencies": {
+		"@magicpocket/vuepress-plugin-auto-navbar": "^1.0.8",
 		"@vuepress/client": "2.0.0-beta.48",
+		"chokidar": "^3.5.3",
 		"glob": "^8.0.3",
 		"vue": "^3.2.37",
 		"vuepress": "2.0.0-beta.48"
-	},
-	"dependencies": {
-		"@magicpocket/vuepress-plugin-auto-navbar": "^1.0.7"
 	}
 }

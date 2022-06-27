@@ -1,0 +1,34 @@
+import{_ as n,o as i,c as e,e as s}from"./app.6e5a8480.js";const l={},c=s(`<h1 id="nginx\u5B89\u88C5\u76EE\u5F55\u8BB2\u89E3" tabindex="-1"><a class="header-anchor" href="#nginx\u5B89\u88C5\u76EE\u5F55\u8BB2\u89E3" aria-hidden="true">#</a> Nginx\u5B89\u88C5\u76EE\u5F55\u8BB2\u89E3</h1><h2 id="\u5B89\u88C5\u76EE\u5F55\u8BE6\u89E3" tabindex="-1"><a class="header-anchor" href="#\u5B89\u88C5\u76EE\u5F55\u8BE6\u89E3" aria-hidden="true">#</a> \u5B89\u88C5\u76EE\u5F55\u8BE6\u89E3</h2><p>\u901A\u8FC7\u547D\u4EE4<code>rpm -ql nginx</code>\u67E5\u770BNginx\u751F\u6210\u7684\u6587\u4EF6</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>/etc/logrotate.d/nginx
+/etc/nginx
+/etc/nginx/conf.d
+/etc/nginx/conf.d/default.conf
+/etc/nginx/fastcgi_params
+/etc/nginx/koi-utf
+/etc/nginx/koi-win
+/etc/nginx/mime.types
+/etc/nginx/modules
+/etc/nginx/nginx.conf
+/etc/nginx/scgi_params
+/etc/nginx/uwsgi_params
+/etc/nginx/win-utf
+/etc/sysconfig/nginx
+/etc/sysconfig/nginx-debug
+/usr/lib/systemd/system/nginx-debug.service
+/usr/lib/systemd/system/nginx.service
+/usr/lib64/nginx
+/usr/lib64/nginx/modules
+/usr/libexec/initscripts/legacy-actions/nginx
+/usr/libexec/initscripts/legacy-actions/nginx/check-reload
+/usr/libexec/initscripts/legacy-actions/nginx/upgrade
+/usr/sbin/nginx
+/usr/sbin/nginx-debug
+/usr/share/doc/nginx-1.16.1
+/usr/share/doc/nginx-1.16.1/COPYRIGHT
+/usr/share/man/man8/nginx.8.gz
+/usr/share/nginx
+/usr/share/nginx/html
+/usr/share/nginx/html/50x.html
+/usr/share/nginx/html/index.html
+/var/cache/nginx
+/var/log/nginx
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr><p><code>/etc/logrotate.d/nginx</code></p><ul><li>\u7C7B\u578B\uFF1A\u914D\u7F6E\u6587\u4EF6</li><li>\u4F5C\u7528\uFF1ANginx\u65E5\u5FD7\u8F6E\u8F6C\uFF0C\u7528\u4E8Elogrotate\u670D\u52A1\u7684\u65E5\u5FD7\u5207\u5272\uFF08\u6BD4\u5982\u6309\u5929\u5207\u5272\u65E5\u5FD7\uFF09</li></ul><hr><p><code>/etc/nginx /etc/nginx/nginx.conf /etc/nginx/conf.d /etc/nginx/conf.d/default.conf</code></p><ul><li>\u7C7B\u578B\uFF1A\u76EE\u5F55\uFF0C\u914D\u7F6E\u6587\u4EF6</li><li>\u4F5C\u7528\uFF1ANginx\u4E3B\u914D\u7F6E\u6587\u4EF6</li></ul><p><strong>/etc/nginx/nginx.conf \u662F\u4E3B\u914D\u7F6E\u6587\u4EF6\uFF0C\u5F53Nginx\u542F\u52A8\u4F18\u5148\u8BFB\u53D6\uFF0C\u5F53\u6CA1\u6709\u53D8\u66F4\u7684\u65F6\u5019\uFF0C\u4F1A\u8BFB\u53D6/etc/nginx/conf.d/default.conf\uFF08\u5B89\u88C5\u662F\u9ED8\u8BA4\u52A0\u8F7D\u7684\uFF09\u3002</strong></p><hr><p><code>/etc/nginx/fastcgi_params /etc/nginx/uwsgi_params /etc/nginx/scgi_params</code></p><ul><li>\u7C7B\u578B\uFF1A\u914D\u7F6E\u6587\u4EF6</li><li>\u4F5C\u7528\uFF1Acgi\u914D\u7F6E\u76F8\u5173\uFF0Cfastcgi\u914D\u7F6E</li></ul><hr><p><code>/etc/nginx/koi-utf /etc/nginx/koi-win /etc/nginx/win-utf</code></p><ul><li>\u7C7B\u578B\uFF1A\u914D\u7F6E\u6587\u4EF6</li><li>\u4F5C\u7528\uFF1A\u7F16\u7801\u8F6C\u6362\u6620\u5C04\u8F6C\u5316\u6587\u4EF6</li></ul><hr><p><code>/etc/nginx/mime.types</code></p><ul><li>\u7C7B\u578B\uFF1A\u914D\u7F6E\u6587\u4EF6</li><li>\u4F5C\u7528\uFF1A\u8BBE\u7F6Ehttp\u534F\u8BAE\u7684ContentType(\u6570\u636E\u8FD4\u56DE\u7C7B\u578B)\u4E0E\u6269\u5C55\u540D\u5BF9\u5E94\u5173\u7CFB</li></ul><p><strong>\u5F53Nginx\u8981\u5904\u7406\u4E00\u4E9B\u4E0D\u80FD\u8BC6\u522B\u7684\u6269\u5C55\u540D\u548C\u6587\u4EF6\u7C7B\u578B\u7684\u65F6\u5019\u5C31\u9700\u8981\u7F16\u8F91\u8BE5\u6587\u4EF6</strong></p><hr><p><code>/usr/lib/systemd/system/nginx-debug.service /usr/lib/systemd/system/nginx.service /etc/sysconfig/nginx /etc/sysconfig/nginx-debug</code></p><ul><li>\u7C7B\u578B\uFF1A\u914D\u7F6E\u6587\u4EF6</li><li>\u4F5C\u7528\uFF1A\u7528\u4E8E\u914D\u7F6E\u51FA\u7CFB\u7EDF\u5B88\u62A4\u8FDB\u7A0B\u7BA1\u7406\u5668\u7BA1\u7406\u65B9\u5F0F</li></ul><hr><p><code>/usr/lib64/nginx /etc/nginx/modules</code></p><ul><li>\u7C7B\u578B\uFF1A\u76EE\u5F55</li><li>\u4F5C\u7528\uFF1ANginx\u6A21\u5757\u76EE\u5F55</li></ul><hr><p><code>/usr/sbin/nginx /usr/sbin/nginx-debug</code></p><ul><li>\u7C7B\u578B\uFF1A\u547D\u4EE4</li><li>\u4F5C\u7528\uFF1ANginx\u670D\u52A1\u7684\u542F\u52A8\u7BA1\u7406\u7684\u7EC8\u7AEF\u547D\u4EE4</li></ul><hr><p><code>/usr/share/doc/nginx-1.16.0 /usr/share/doc/nginx-1.16.0/COPYRIGHT /usr/share/man/man8/nginx.8.gz</code></p><ul><li>\u7C7B\u578B\uFF1A\u6587\u4EF6\uFF0C\u76EE\u5F55</li><li>\u4F5C\u7528\uFF1ANginx\u7684\u624B\u518C\u548C\u5E2E\u52A9\u6587\u4EF6</li></ul><hr><p><code>/var/cache/nginx</code></p><ul><li>\u7C7B\u578B\uFF1A\u76EE\u5F55</li><li>\u4F5C\u7528\uFF1ANginx\u7684\u7F13\u5B58\u76EE\u5F55</li></ul><p><strong>Nginx\u5904\u7406\u53EF\u4EE5\u505A\u4EE3\u7406\uFF0C\u8FD8\u53EF\u4EE5\u505A\u7F13\u5B58\u670D\u52A1</strong></p><hr><p><code>/var/log/nginx</code></p><ul><li>\u7C7B\u578B\uFF1A\u76EE\u5F55</li><li>\u4F5C\u7528\uFF1ANginx\u7684\u65E5\u5FD7\u76EE\u5F55</li></ul>`,40),d=[c];function r(a,g){return i(),e("div",null,d)}var u=n(l,[["render",r],["__file","Nginx\u5B89\u88C5\u76EE\u5F55\u8BB2\u89E3.html.vue"]]);export{u as default};

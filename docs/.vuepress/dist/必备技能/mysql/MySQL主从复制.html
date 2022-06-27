@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.48">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" sizes="16x16" type="image/png" href="/images/icon.png"><title>MySQL主从复制 | 代码干燥计划</title><meta name="description" content="rather do my code">
+    <link rel="modulepreload" href="/assets/app.6e5a8480.js"><link rel="modulepreload" href="/assets/MySQL主从复制.html.a862e36a.js"><link rel="modulepreload" href="/assets/MySQL主从复制.html.a102ff02.js"><link rel="prefetch" href="/assets/index.html.a30921b9.js"><link rel="prefetch" href="/assets/index.html.132ccbcf.js"><link rel="prefetch" href="/assets/SassScript.html.aebed272.js"><link rel="prefetch" href="/assets/环境配置.html.7f57299d.js"><link rel="prefetch" href="/assets/MySQL性能优化.html.66180e70.js"><link rel="prefetch" href="/assets/MySQL的四种事务隔离级别.html.6ecba92e.js"><link rel="prefetch" href="/assets/index.html.0d93bfdf.js"><link rel="prefetch" href="/assets/index.html.4fd6c025.js"><link rel="prefetch" href="/assets/Redis指南.html.99128d17.js"><link rel="prefetch" href="/assets/Nginx作为缓存服务.html.a6822f79.js"><link rel="prefetch" href="/assets/Nginx作为负载均衡服务.html.02f26f4f.js"><link rel="prefetch" href="/assets/Nginx作为静态资源web服务.html.bcfc2248.js"><link rel="prefetch" href="/assets/Nginx安装目录讲解.html.01d3cac4.js"><link rel="prefetch" href="/assets/Nginx官方模块.html.18e9a04d.js"><link rel="prefetch" href="/assets/Nginx常用模块索引.html.87241d28.js"><link rel="prefetch" href="/assets/Nginx配置参数及优化.html.6b1311d4.js"><link rel="prefetch" href="/assets/index.html.7ae4f030.js"><link rel="prefetch" href="/assets/404.html.265028f6.js"><link rel="prefetch" href="/assets/index.html.87a8dc51.js"><link rel="prefetch" href="/assets/index.html.9d31d35a.js"><link rel="prefetch" href="/assets/SassScript.html.1b9926df.js"><link rel="prefetch" href="/assets/环境配置.html.47ed2d52.js"><link rel="prefetch" href="/assets/MySQL性能优化.html.727bf8af.js"><link rel="prefetch" href="/assets/MySQL的四种事务隔离级别.html.7e2d0f52.js"><link rel="prefetch" href="/assets/index.html.3f227cb6.js"><link rel="prefetch" href="/assets/index.html.087c4629.js"><link rel="prefetch" href="/assets/Redis指南.html.5c0a2133.js"><link rel="prefetch" href="/assets/Nginx作为缓存服务.html.b7baa8b3.js"><link rel="prefetch" href="/assets/Nginx作为负载均衡服务.html.9b7d9471.js"><link rel="prefetch" href="/assets/Nginx作为静态资源web服务.html.8475ebde.js"><link rel="prefetch" href="/assets/Nginx安装目录讲解.html.ca8b15f4.js"><link rel="prefetch" href="/assets/Nginx官方模块.html.6d67a4cc.js"><link rel="prefetch" href="/assets/Nginx常用模块索引.html.2ef2a777.js"><link rel="prefetch" href="/assets/Nginx配置参数及优化.html.6a663a0f.js"><link rel="prefetch" href="/assets/index.html.19ac45d8.js"><link rel="prefetch" href="/assets/404.html.7644217f.js"><link rel="prefetch" href="/assets/404.4f53af7d.js"><link rel="prefetch" href="/assets/Layout.84c24673.js">
+    <link rel="stylesheet" href="/assets/style.acf36ec1.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">代码干燥计划</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><nav class="navbar-items can-hide"><!--[--><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="📂  Scss"><span class="title">📂  Scss</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="📂  Scss"><span class="title">📂  Scss</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><a href="/Scss/SassScript.html" class="" aria-label="SassScript"><!--[--><!--]--> SassScript <!--[--><!--]--></a></li><li class="navbar-dropdown-item"><a href="/Scss/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" class="" aria-label="Scss环境配置"><!--[--><!--]--> Scss环境配置 <!--[--><!--]--></a></li><!--]--></ul></div></div><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="📂  必备技能"><span class="title">📂  必备技能</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="📂  必备技能"><span class="title">📂  必备技能</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><!--[--><h4 class="navbar-dropdown-subtitle"><a href="/必备技能/mysql/" class="" aria-label="📂  mysql"><!--[--><!--]--> 📂  mysql <!--[--><!--]--></a></h4><ul class="navbar-dropdown-subitem-wrapper"><!--[--><li class="navbar-dropdown-subitem"><a aria-current="page" href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/mysql/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html" class="router-link-active router-link-exact-active router-link-active" aria-label="MySQL主从复制"><!--[--><!--]--> MySQL主从复制 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/mysql/MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html" class="" aria-label="MySQL性能优化"><!--[--><!--]--> MySQL性能优化 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/mysql/MySQL%E7%9A%84%E5%9B%9B%E7%A7%8D%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.html" class="" aria-label="MySQL的四种事务隔离级别"><!--[--><!--]--> MySQL的四种事务隔离级别 <!--[--><!--]--></a></li><!--]--></ul><!--]--></li><li class="navbar-dropdown-item"><!--[--><h4 class="navbar-dropdown-subtitle"><a href="/必备技能/nginx/" class="" aria-label="📂  nginx"><!--[--><!--]--> 📂  nginx <!--[--><!--]--></a></h4><ul class="navbar-dropdown-subitem-wrapper"><!--[--><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E4%BD%9C%E4%B8%BA%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1.html" class="" aria-label="Nginx作为缓存服务"><!--[--><!--]--> Nginx作为缓存服务 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E4%BD%9C%E4%B8%BA%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E6%9C%8D%E5%8A%A1.html" class="" aria-label="Nginx作为负载均衡服务"><!--[--><!--]--> Nginx作为负载均衡服务 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E4%BD%9C%E4%B8%BA%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90web%E6%9C%8D%E5%8A%A1.html" class="" aria-label="Nginx作为静态资源web服务"><!--[--><!--]--> Nginx作为静态资源web服务 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3.html" class="" aria-label="Nginx安装目录讲解"><!--[--><!--]--> Nginx安装目录讲解 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E5%AE%98%E6%96%B9%E6%A8%A1%E5%9D%97.html" class="" aria-label="Nginx官方模块"><!--[--><!--]--> Nginx官方模块 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E7%B4%A2%E5%BC%95.html" class="" aria-label="Nginx常用模块索引"><!--[--><!--]--> Nginx常用模块索引 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%8F%8A%E4%BC%98%E5%8C%96.html" class="" aria-label="Nginx配置参数及优化"><!--[--><!--]--> Nginx配置参数及优化 <!--[--><!--]--></a></li><!--]--></ul><!--]--></li><li class="navbar-dropdown-item"><!--[--><h4 class="navbar-dropdown-subtitle"><a href="/必备技能/redis/" class="" aria-label="📂  redis"><!--[--><!--]--> 📂  redis <!--[--><!--]--></a></h4><ul class="navbar-dropdown-subitem-wrapper"><!--[--><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/redis/Redis%E6%8C%87%E5%8D%97.html" class="" aria-label="Redis指南"><!--[--><!--]--> Redis指南 <!--[--><!--]--></a></li><!--]--></ul><!--]--></li><!--]--></ul></div></div><div class="navbar-item"><a class="external-link" href="https://github.com/putongjian" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-color-mode-button" title="toggle color mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-items"><!--[--><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="📂  Scss"><span class="title">📂  Scss</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="📂  Scss"><span class="title">📂  Scss</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><a href="/Scss/SassScript.html" class="" aria-label="SassScript"><!--[--><!--]--> SassScript <!--[--><!--]--></a></li><li class="navbar-dropdown-item"><a href="/Scss/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" class="" aria-label="Scss环境配置"><!--[--><!--]--> Scss环境配置 <!--[--><!--]--></a></li><!--]--></ul></div></div><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="📂  必备技能"><span class="title">📂  必备技能</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="📂  必备技能"><span class="title">📂  必备技能</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><!--[--><h4 class="navbar-dropdown-subtitle"><a href="/必备技能/mysql/" class="" aria-label="📂  mysql"><!--[--><!--]--> 📂  mysql <!--[--><!--]--></a></h4><ul class="navbar-dropdown-subitem-wrapper"><!--[--><li class="navbar-dropdown-subitem"><a aria-current="page" href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/mysql/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.html" class="router-link-active router-link-exact-active router-link-active" aria-label="MySQL主从复制"><!--[--><!--]--> MySQL主从复制 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/mysql/MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html" class="" aria-label="MySQL性能优化"><!--[--><!--]--> MySQL性能优化 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/mysql/MySQL%E7%9A%84%E5%9B%9B%E7%A7%8D%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.html" class="" aria-label="MySQL的四种事务隔离级别"><!--[--><!--]--> MySQL的四种事务隔离级别 <!--[--><!--]--></a></li><!--]--></ul><!--]--></li><li class="navbar-dropdown-item"><!--[--><h4 class="navbar-dropdown-subtitle"><a href="/必备技能/nginx/" class="" aria-label="📂  nginx"><!--[--><!--]--> 📂  nginx <!--[--><!--]--></a></h4><ul class="navbar-dropdown-subitem-wrapper"><!--[--><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E4%BD%9C%E4%B8%BA%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1.html" class="" aria-label="Nginx作为缓存服务"><!--[--><!--]--> Nginx作为缓存服务 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E4%BD%9C%E4%B8%BA%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E6%9C%8D%E5%8A%A1.html" class="" aria-label="Nginx作为负载均衡服务"><!--[--><!--]--> Nginx作为负载均衡服务 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E4%BD%9C%E4%B8%BA%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90web%E6%9C%8D%E5%8A%A1.html" class="" aria-label="Nginx作为静态资源web服务"><!--[--><!--]--> Nginx作为静态资源web服务 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3.html" class="" aria-label="Nginx安装目录讲解"><!--[--><!--]--> Nginx安装目录讲解 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E5%AE%98%E6%96%B9%E6%A8%A1%E5%9D%97.html" class="" aria-label="Nginx官方模块"><!--[--><!--]--> Nginx官方模块 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%E7%B4%A2%E5%BC%95.html" class="" aria-label="Nginx常用模块索引"><!--[--><!--]--> Nginx常用模块索引 <!--[--><!--]--></a></li><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/nginx/Nginx%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%8F%8A%E4%BC%98%E5%8C%96.html" class="" aria-label="Nginx配置参数及优化"><!--[--><!--]--> Nginx配置参数及优化 <!--[--><!--]--></a></li><!--]--></ul><!--]--></li><li class="navbar-dropdown-item"><!--[--><h4 class="navbar-dropdown-subtitle"><a href="/必备技能/redis/" class="" aria-label="📂  redis"><!--[--><!--]--> 📂  redis <!--[--><!--]--></a></h4><ul class="navbar-dropdown-subitem-wrapper"><!--[--><li class="navbar-dropdown-subitem"><a href="/%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD/redis/Redis%E6%8C%87%E5%8D%97.html" class="" aria-label="Redis指南"><!--[--><!--]--> Redis指南 <!--[--><!--]--></a></li><!--]--></ul><!--]--></li><!--]--></ul></div></div><div class="navbar-item"><a class="external-link" href="https://github.com/putongjian" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading">MySQL主从复制 <!----></p><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><!--]--><div><h1 id="mysql主从复制" tabindex="-1"><a class="header-anchor" href="#mysql主从复制" aria-hidden="true">#</a> MySQL主从复制</h1><p>基于Docker来演示如何配置MySQL主从复制。我们事先准备好MySQL的配置文件以及保存MySQL数据和运行日志的目录，然后通过Docker的数据卷映射来指定容器的配置、数据和日志文件的位置。</p><div class="language-Shell ext-Shell line-numbers-mode"><pre class="language-Shell"><code>root
+└── mysql
+    ├── master
+    │   ├── conf
+    |	└── data
+    └── slave-1
+    |	├── conf
+    |	└── data
+    └── slave-2
+    |	├── conf
+    |	└── data
+    └── slave-3
+    	├── conf
+    	└── data
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol><li><p>MySQL的配置文件（master和slave的配置文件需要不同的server-id）。</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[mysqld]
+pid-file=/var/run/mysqld/mysqld.pid
+socket=/var/run/mysqld/mysqld.sock
+datadir=/var/lib/mysql
+log-error=/var/log/mysql/error.log
+server-id=1
+log-bin=/var/log/mysql/mysql-bin.log
+expire_logs_days=30
+max_binlog_size=256M
+symbolic-links=0
+# slow_query_log=ON
+# slow_query_log_file=/var/log/mysql/slow.log
+# long_query_time=1
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li><li><p>创建和配置master。</p><div class="language-Shell ext-Shell line-numbers-mode"><pre class="language-Shell"><code>docker run -d -p 3306:3306 --name mysql-master \
+-v /root/mysql/master/conf:/etc/mysql/mysql.conf.d \
+-v /root/mysql/master/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+
+docker exec -it mysql-master /bin/bash
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-Shell ext-Shell line-numbers-mode"><pre class="language-Shell"><code>mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.7.23-log MySQL Community Server (GPL)
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+mysql&gt; grant replication slave on *.* to &#39;slave&#39;@&#39;%&#39; identified by &#39;iamslave&#39;;
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; show master status;
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000003 |      590 |              |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; quit
+Bye
+exit
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面创建Docker容器时使用的<code>-v</code>参数（<code>--volume</code>）表示映射数据卷，冒号前是宿主机的目录，冒号后是容器中的目录，这样相当于将宿主机中的目录挂载到了容器中。</p></li><li><p>创建和配置slave。</p><div class="language-Shell ext-Shell line-numbers-mode"><pre class="language-Shell"><code>docker run -d -p 3308:3306 --name mysql-slave-1 \
+-v /root/mysql/slave-1/conf:/etc/mysql/mysql.conf.d \
+-v /root/mysql/slave-1/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=123456 \
+--link mysql-master:mysql-master mysql:5.7
+
+docker run -d -p 3309:3306 --name mysql-slave-2 \
+-v /root/mysql/slave-2/conf:/etc/mysql/mysql.conf.d \
+-v /root/mysql/slave-2/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=123456 \
+--link mysql-master:mysql-master mysql:5.7
+
+docker run -d -p 3310:3306 --name mysql-slave-3 \
+-v /root/mysql/slave-3/conf:/etc/mysql/mysql.conf.d \
+-v /root/mysql/slave-3/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=123456 \
+--link mysql-master:mysql-master mysql:5.7
+
+docker exec -it mysql-slave-1 /bin/bash
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-Shell ext-Shell line-numbers-mode"><pre class="language-Shell"><code>mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.23-log MySQL Community Server (GPL)
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+mysql&gt; reset slave;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql&gt; change master to master_host=&#39;mysql-master&#39;, master_user=&#39;slave&#39;, master_password=&#39;iamslave&#39;, master_log_file=&#39;mysql-bin.000003&#39;, master_log_pos=590;
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql&gt; start slave;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; show slave status\G
+*************************** 1. row ***************************
+               Slave_IO_State: Waiting for master to send event
+                  Master_Host: mysql57
+                  Master_User: slave
+                  Master_Port: 3306
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.000001
+          Read_Master_Log_Pos: 590
+               Relay_Log_File: f352f05eb9d0-relay-bin.000002
+                Relay_Log_Pos: 320
+        Relay_Master_Log_File: mysql-bin.000001
+             Slave_IO_Running: Yes
+            Slave_SQL_Running: Yes
+             Replicate_Do_DB:
+          Replicate_Ignore_DB:
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table:
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 590
+              Relay_Log_Space: 534
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: 0
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error:
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 1
+                  Master_UUID: 30c38043-ada1-11e8-8fa1-0242ac110002
+             Master_Info_File: /var/lib/mysql/master.info
+                    SQL_Delay: 0
+          SQL_Remaining_Delay: NULL
+      Slave_SQL_Running_State: Slave has read all relay log; waiting for more updates
+           Master_Retry_Count: 86400
+                  Master_Bind:
+      Last_IO_Error_Timestamp:
+     Last_SQL_Error_Timestamp:
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+           Retrieved_Gtid_Set:
+            Executed_Gtid_Set:
+                Auto_Position: 0
+         Replicate_Rewrite_DB:
+                 Channel_Name:
+           Master_TLS_Version:
+1 row in set (0.00 sec)
+
+mysql&gt; quit
+Bye
+exit
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接下来可以如法炮制配置出slave2和slave3，这样就可以搭建起一个“一主带三从”的主从复制环境。上面创建创建容器时使用的<code>--link</code>参数用来配置容器在网络上的主机名（网络地址别名）。</p></li></ol></div><!--[--><!--]--></div><footer class="page-meta"><div class="meta-item edit-link"><a class="external-link meta-item-label" href="https://github.com/putongjian/edit/main/docs/必备技能/mysql/MySQL主从复制.md" rel="noopener noreferrer" target="_blank" aria-label="Edit this page"><!--[--><!--]--> Edit this page <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: ptj@sykjwh.cn">ptj</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/assets/app.6e5a8480.js" defer></script>
+  </body>
+</html>
